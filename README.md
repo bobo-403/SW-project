@@ -1,18 +1,84 @@
-## Getting Started
+# 시스템을 콘솔로 구현하였으며 숫자를 입력하여 화면을 이동하는 시스템이다.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+1. 초기 화면
+   시스템의 이름이 표시된다.
+   숫자를 입력해 Login, SignUp 화면으로 이동한다.
+   Exit를 선택하면 시스템이 종료된다.
 
-## Folder Structure
+2. SiupUp
+   아이디, 비밀번호, 전화번호를 입력한후 중복확인이 완료되면 회원가입을 완료한다.
 
-The workspace contains two folders by default, where:
+3. Login
+   회원가입한 아이디와 비밀번호를 통해 알맞은 사용자 모드를 선택해 로그인한다.
+   아이디와 비밀번호가 존재하지 않는다면 로그인 되지 않는다.
+   ID : admin, PW : admin123으로 입력한 경우 관리자 모드로 로그인 된다.
+   관리자는 따로 회원가입이 필요 없다.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+4. Admin (관리자로 로그인 한 경우)
+   관리자의 메뉴가 화면에 표시된다.
+   숫자를 입력해 화면을 이동한다.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+4-1. product manage
+카테고리를 추가할 것인지 상품을 추가, 삭제할 것인지 선택한다.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+4-1-1. 카테고리 추가
+추가할 카테고리의 이름을 입력한다.
+입력하면 카테고리가 추가되고 product mange(4-1) 화면으로다시 이동한다.
 
-## Dependency Management
+4-1-2. 상품 관리
+카테고리 이름들을 보여준다.
+상품을 추가, 삭제할 카테고리의 이름을 입력한다.
+선택한 카테고리의 상품을 보여준다.
+이 카테고리에서 상품을 삭제 할건지 추가할 건지 선택한다.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+삭제 선택 -> 삭제할 상품의 id를 입력한다. 삭제 후 product manage(4-1) 화면으로 이동한다.
+추가 선택 -> 상품의 id, name, price, description을 입력한다. 상품이 해당 카테고리에 등록된다.
+product manage(4-1) 화면으로 이동한다.
+
+4-2. Customer Order
+고객의 아이디와 그 고객이 주문한 정보들이 표시된다.
+
+4-3. Review
+모든 고객이 작성한 리뷰가 표시된다.
+
+4-4. Logout
+초기화면으로 이동한다.
+
+5. Customer (고객으로 로그인한 경우)
+   고객의 메뉴가 화면에 표시된다.
+   숫자를 입력해 화면을 이동한다.
+
+5-1. Personal Type Diagnosis
+표시되는 질문들에 대해 답한다.
+personal type이 결정된다.
+고객 정보에 저장할지 답한다.
+스타일 추천을 할 것인지 선택한다.
+
+스타일 추천 y -> 고객 personal type 의 카테고리로 이동한다.
+스타일 추천 n -> 고객 메뉴 페이지로 이동한다.
+
+5-2. Products
+카테고리 이름들을 보여준다.
+상품을 추가, 삭제할 카테고리의 이름을 입력한다.
+선택한 카테고리의 상품을 보여준다.
+장바구니에 담을 상품의 id와 수량을 입력한다. -> 해당 id의 상품을 고객의 장바구니에 저장한다.
+id로 0을 입력하면 고객 메뉴 페이지로 이동한다.
+
+5-3. Review
+모든 고객이 작성한 리뷰가 표시된다.
+
+5-4. My Order
+로그인한 고객이 주문한 상품들이 표시된다.
+
+5-5. Cart
+고객이 장바구니에 담은 상품들과 수량, 가격을 표시한다.
+장바구니에 담은 상품을 주문할 것인지 선택한다.
+주문 -> 주소를 입력한다. 주문이 My Order에 저장 되고 Cart에서는 삭제된다.
+완료 후 고객 메뉴페이지로 이동한다.
+나가기 -> 고객 메뉴페이지로 이동한다.
+
+5-6. Logout
+초기화면으로 이동한다.
+
+6. Exit
+   시스템을 종료한다.
